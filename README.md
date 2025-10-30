@@ -1,73 +1,132 @@
-# Welcome to your Lovable project
+# Expense Management Application
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/2481cb9b-79e6-49a4-bc43-d3c830ca595d
+This is a modern web application for managing expenses, built with React and TypeScript. The application provides features for tracking expenses, categorizing them, and visualizing spending patterns.
 
-## How can I edit this code?
+### Key Features
+- Expense tracking and management
+- Category-based organization
+- Visual charts and analytics
+- Responsive and accessible UI
+- Modern, user-friendly interface
 
-There are several ways of editing your application.
+### Tech Stack
+- **Frontend Framework**: React with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui (based on Radix UI)
+- **Additional Libraries**:
+  - React Query for data management
+  - date-fns for date handling
+  - Embla Carousel for sliders
+  - next-themes for theme management
 
-**Use Lovable**
+## Getting Started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2481cb9b-79e6-49a4-bc43-d3c830ca595d) and start prompting.
+### Prerequisites
+- Node.js (Latest LTS version recommended)
+- npm or yarn package manager
 
-Changes made via Lovable will be committed automatically to this repo.
+### Local Development Setup
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. Clone the repository
+```bash
+git clone https://github.com/supasinee2555-prog/test-vibe-backend.git
+cd test-vibe-backend
 ```
 
-**Edit a file directly in GitHub**
+2. Install dependencies
+```bash
+npm install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. Start the development server
+```bash
+npm run dev
+```
+The application will be available at `http://localhost:5173`
 
-**Use GitHub Codespaces**
+### Available Scripts
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build for development
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Project Structure
+```
+src/
+  ├── components/     # Reusable UI components
+  │   ├── ui/        # Base UI components from shadcn/ui
+  │   ├── AddExpenseForm.tsx
+  │   ├── CategoryBadge.tsx
+  │   ├── ExpenseChart.tsx
+  │   └── ExpenseList.tsx
+  ├── hooks/         # Custom React hooks
+  ├── lib/           # Utility functions
+  └── pages/         # Application pages
+```
 
-## What technologies are used for this project?
+### Contributing
+1. Create a new branch for your feature
+2. Make your changes
+3. Submit a pull request
 
-This project is built with:
+### Building for Production
+To build the application for production:
+```bash
+npm run build
+```
+The built files will be in the `dist` directory.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Preview Production Build
+To preview the production build locally:
+```bash
+npm run build
+npm run preview
+```
 
-## How can I deploy this project?
+## GitHub Copilot Guidelines
 
-Simply open [Lovable](https://lovable.dev/projects/2481cb9b-79e6-49a4-bc43-d3c830ca595d) and click on Share -> Publish.
+### Usage Rules
+1. **Code Review**
+   - Always review Copilot suggestions before accepting them
+   - Verify that suggested code follows project conventions
+   - Check for potential security issues in suggested code
 
-## Can I connect a custom domain to my Lovable project?
+2. **Best Practices**
+   - Use descriptive comments to get better suggestions
+   - Break down complex tasks into smaller components
+   - Add type annotations to improve TypeScript suggestions
+   - Test Copilot-suggested code thoroughly
 
-Yes, you can!
+3. **Code Style**
+   - Ensure Copilot suggestions follow our ESLint rules
+   - Maintain consistent naming conventions
+   - Format code according to project standards
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+4. **Security Considerations**
+   - Never accept credentials or API keys suggested by Copilot
+   - Review security-sensitive code manually
+   - Validate any data handling or validation logic
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+5. **Documentation**
+   - Add comments explaining complex logic
+   - Document any deviations from Copilot suggestions
+   - Keep documentation up-to-date with code changes
+
+### Example Usage
+```typescript
+// Good: Descriptive comment for better suggestions
+// Create a function to calculate total expenses for a given category and date range
+function calculateCategoryExpenses(category: string, startDate: Date, endDate: Date): number {
+  // Copilot will suggest implementation
+}
+
+// Bad: Vague comment
+// Calculate stuff
+function calc(cat: string, s: Date, e: Date): number {
+  // Harder for Copilot to provide relevant suggestions
+}
+```
